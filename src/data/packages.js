@@ -1,8 +1,8 @@
-import lsgen3 from '../assets/engines/lsgen3.png';
-import lsgen4 from '../assets/engines/lsgen4.png';
-import lq4 from '../assets/engines/lq4.png';
-import lq9 from '../assets/engines/lq9.png';
-import gen46L80 from '../assets/engines/gen4L60.png';
+import lsgen3 from '../assets/engines/LSGen3.png';
+import lsgen4 from '../assets/engines/LSGen4.png';
+import lq4 from '../assets/engines/LQ4.png';
+import lq9 from '../assets/engines/LQ9.png';
+import gen46L80 from '../assets/engines/Gen4L60.png';
 export const packages = [
   {
     id: 1,
