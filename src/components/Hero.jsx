@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/HeroFondo.png';
+import heroBg from '../assets/herofondo.png';
 
 export default function Hero() {
   return (

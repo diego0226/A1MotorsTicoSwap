@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Settings, Zap, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import nosotrosBg from '../assets/HeroFondo.png';
-import hpTunners from '../assets/nosotros/HpTunners.png';
-import Stock from '../assets/nosotros/Stock.JPEG';
-import Performance from '../assets/nosotros/Performance.JPEG';
-import workshop from '../assets/nosotros/workshop.JPEG';
+import nosotrosBg from '../assets/herofondo.png';
+import hptunners from '../assets/nosotros/hptunners.png';
+import stock from '../assets/nosotros/stock.png';
+import performance from '../assets/nosotros/performance.png';
+import workshop from '../assets/nosotros/workshop.png';
 import logo from '../assets/nosotros/logo.png';
 
 
@@ -131,18 +131,18 @@ export default function Nosotros() {
             </motion.div>
             {/* Bento Item 2 */}
             <motion.div variants={itemVariants} className="md:col-span-2 relative group overflow-hidden bg-[#201f1f] border border-[#353534] h-[242px]">
-              <img className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Dashboard" src={hpTunners} />
+              <img className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Dashboard" src={hptunners} />
               <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-[#131313] to-transparent">
                 <div className="bg-[#003399] text-white px-3 py-1 inline-block mb-1 font-sans text-[14px] font-semibold uppercase tracking-[0.05em]">Digital Calibration</div>
               </div>
             </motion.div>
             {/* Bento Item 3 */}
             <motion.div variants={itemVariants} className="relative group overflow-hidden bg-[#201f1f] border border-[#353534] aspect-[1/1]">
-              <img className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Precision task" src={Stock} />
+              <img className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Precision task" src={stock} />
             </motion.div>
             {/* Bento Item 4 */}
             <motion.div variants={itemVariants} className="relative group overflow-hidden bg-[#201f1f] border border-[#353534] aspect-[1/1]">
-              <img className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Dyno run" src={Performance} />
+              <img className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Dyno run" src={performance} />
               <div className="absolute bottom-4 left-4">
                 <div className="font-sans text-[14px] font-semibold uppercase text-[#b5c4ff] tracking-[0.05em] leading-[1]">Performance</div>
               </div>
