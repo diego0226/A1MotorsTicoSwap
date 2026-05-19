@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #003399;
+  --color-secondary: #E31E24;
+  --color-accent: #e5e2e1;
+  --color-dark-base: #0A0A0A;
+  --color-dark-surface: #121212;
+  --color-dark-card: #1A1A1A;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-dark-base);
+    color: var(--color-accent);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(227, 30, 36, 0.5);
+  }
+  .border-glow {
+    box-shadow: 0 0 10px rgba(0, 51, 153, 0.4);
+  }
+}
+
+/* Custom Scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-card);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
