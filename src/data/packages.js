@@ -1,8 +1,8 @@
-import LSGen3 from '../assets/engines/LSGen3.png';
-import LSGen4 from '../assets/engines/LSGen4.png';
-import LQ4 from '../assets/engines/LQ4.png';
-import LQ9 from '../assets/engines/LQ9.png';
-import LSGen46L80 from '../assets/engines/Gen4L60.png';
+import lsgen3 from '../assets/engines/lsgen3.png';
+import lsgen4 from '../assets/engines/lsgen4.png';
+import lq4 from '../assets/engines/lq4.png';
+import lq9 from '../assets/engines/lq9.png';
+import gen46L80 from '../assets/engines/gen4L60.png';
 export const packages = [
   {
     id: 1,
@@ -11,7 +11,7 @@ export const packages = [
     throttle: "Chicote",
     transmission: "4L60",
     traction: "4x4",
-    image: LSGen3,
+    image: lsgen3,
     price: "Consultar"
   },
   {
@@ -21,7 +21,7 @@ export const packages = [
     throttle: "Pedal electrónico",
     transmission: "4L65",
     traction: "4x2",
-    image: LSGen4,
+    image: lsgen4,
     price: "Consultar"
   },
   {
@@ -31,7 +31,7 @@ export const packages = [
     throttle: "Chicote",
     transmission: "4L80",
     traction: "4x4",
-    image: LQ4,
+    image: lq4,
     price: "Consultar"
   },
   {
@@ -41,7 +41,7 @@ export const packages = [
     throttle: "Pedal electrónico",
     transmission: "4L60",
     traction: "4x2",
-    image: LQ4,
+    image: lq4,
     price: "Consultar"
   },
   {
@@ -51,7 +51,7 @@ export const packages = [
     throttle: "Chicote",
     transmission: "4L65",
     traction: "4x4",
-    image: LQ9,
+    image: lq9,
     price: "Consultar"
   },
   {
@@ -61,7 +61,7 @@ export const packages = [
     throttle: "Pedal electrónico",
     transmission: "4L65",
     traction: "4x2",
-    image: LQ9,
+    image: lq9,
     price: "Consultar"
   },
   {
@@ -71,7 +71,7 @@ export const packages = [
     throttle: "Pedal electrónico",
     transmission: "6L80",
     traction: "4x2",
-    image: LSGen46L80,
+    image: gen46L80,
     price: "Consultar"
   }
 ];
