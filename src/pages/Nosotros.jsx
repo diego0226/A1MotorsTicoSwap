@@ -232,7 +232,7 @@ export default function Nosotros() {
           <p className="font-display text-[24px] font-bold mb-12 max-w-2xl mx-auto uppercase leading-[1.3]">Transforma tu proyecto hoy mismo con los especialistas.</p>
           <div className="flex flex-col md:flex-row justify-center gap-6">
             <a
-              href="https://wa.me/50688888888"
+              href="https://wa.me/50689948485"
               className="inline-block bg-[#ce0217] text-white px-12 py-5 font-display text-[24px] font-bold uppercase italic hover:bg-[#ce0217]/90 transition-all border-b-4 border-[#690006]"
             >
               HABLAR POR WHATSAPP
