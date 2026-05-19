@@ -6,7 +6,7 @@ import nosotrosBg from '../assets/HeroFondo.png';
 import hpTunners from '../assets/nosotros/HpTunners.png';
 import Stock from '../assets/nosotros/Stock.JPEG';
 import Performance from '../assets/nosotros/Performance.JPEG';
-import Workshop from '../assets/nosotros/Workshop.JPEG';
+import workshop from '../assets/nosotros/workshop.JPEG';
 import logo from '../assets/nosotros/logo.png';
 
 
@@ -124,7 +124,7 @@ export default function Nosotros() {
           >
             {/* Bento Item 1 */}
             <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-[#201f1f] border border-[#353534] h-[576px]">
-              <img className="w-full h-full object-cover opacity-60 group-hover:scale-100 transition-transform duration-700" alt="Workshop" src={Workshop} />
+              <img className="w-full h-full object-cover opacity-60 group-hover:scale-100 transition-transform duration-700" alt="Workshop" src={workshop} />
               <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-[#131313] to-transparent">
                 <div className="bg-[#003399] text-white px-3 py-1 inline-block mb-3 font-sans text-[14px] font-semibold uppercase tracking-[0.05em]">Events</div>
               </div>
