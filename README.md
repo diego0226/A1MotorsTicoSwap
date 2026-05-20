@@ -1,16 +1,115 @@
-# React + Vite
+# 🚗 A1 Motors Tico Swap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <strong>Especialistas en LS Swaps, transmisiones y proyectos automotrices de alto rendimiento.</strong>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  Plataforma web moderna desarrollada para mostrar motores LS, transmisiones automáticas, información técnica y servicios automotrices con una experiencia visual agresiva e industrial.
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🌐 Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+👉 https://a1motorsticoswap.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 🛠️ Tecnologías Utilizadas
+
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=react,vite,js,html,css,tailwind,git,github,vercel" />
+</p>
+
+- React + Vite
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind CSS
+- Framer Motion
+- Vercel
+
+---
+
+# ⚙️ Características
+
+✅ Diseño industrial/brutalista moderno  
+✅ Animaciones fluidas con Framer Motion  
+✅ Catálogo de motores LS  
+✅ Información de transmisiones automáticas GM  
+✅ Responsive Design  
+✅ Componentes reutilizables  
+✅ Navegación rápida y optimizada  
+✅ Deploy profesional en Vercel  
+
+---
+
+# 📂 Estructura del Proyecto
+
+```bash
+src/
+│
+├── assets/           # Imágenes y recursos
+├── components/       # Componentes reutilizables
+├── pages/            # Páginas principales
+├── data/             # Información de motores/transmisiones
+├── styles/           # Estilos globales
+└── App.jsx
+```
+
+---
+
+# 🚀 Instalación
+
+```bash
+# Clonar repositorio
+git clone https://github.com/TU-USUARIO/a1motorsticoswap.git
+
+# Entrar al proyecto
+cd a1motorsticoswap
+
+# Instalar dependencias
+npm install
+
+# Ejecutar entorno de desarrollo
+npm run dev
+```
+
+---
+
+# 🧠 Objetivo del Proyecto
+
+Este proyecto fue creado para ofrecer una presencia web moderna y visualmente impactante para el mundo de los LS Swaps y proyectos automotrices personalizados, mostrando motores, transmisiones y configuraciones de rendimiento de una manera clara y profesional.
+
+---
+
+# 📱 Responsive Design
+
+Optimizado para:
+
+- 📱 Mobile
+- 💻 Laptop
+- 🖥️ Desktop
+- 📺 Pantallas grandes
+
+---
+
+# 🔥 Performance
+
+- Carga rápida con Vite
+- Componentes optimizados
+- UI fluida y moderna
+- Navegación eficiente
+
+---
+
+# 👨‍💻 Autor
+
+**Diego Zamora / A1 Motors Tico Swap**
+
+---
+
+# ⭐ Support
+
+Si te gustó el proyecto, dale una ⭐ al repositorio.
