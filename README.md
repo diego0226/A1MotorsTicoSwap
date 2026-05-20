@@ -106,7 +106,7 @@ Optimizado para:
 
 # 👨‍💻 Autor
 
-**Diego Zamora / A1 Motors Tico Swap**
+**Diego Zamora**
 
 ---
 
