@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Settings, Zap, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import nosotrosBg from '../assets/HeroFondo2.png';
-import hptunners from '../assets/nosotros/HpTunners.png';
+import nosotrosBg from '../assets/herofondo2.png';
+import hptunners from '../assets/nosotros/hptunners.png';
 import stock from '../assets/nosotros/stock.png';
 import performance from '../assets/nosotros/performance.png';
 import workshop from '../assets/nosotros/workshop.png';
-import logo from '../assets/nosotros/Logo.png';
+import logo from '../assets/nosotros/logo.png';
 
 
 export default function Nosotros() {
