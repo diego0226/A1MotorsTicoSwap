@@ -58,7 +58,7 @@ export default function Personalizar() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="bg-[var(--color-dark-surface)] p-8 sm:p-12 border border-[var(--color-dark-card)]"
+          className="bg-[var(--color-dark-surface)] p-6 sm:p-8 md:p-12 border border-[var(--color-dark-card)]"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

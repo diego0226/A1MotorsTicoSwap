@@ -13,22 +13,24 @@ export default function Catalogo() {
   return (
     <div className="min-h-screen bg-[var(--color-dark-base)] pb-24">
       <div className="bg-[var(--color-dark-surface)] py-20 border-b border-[var(--color-dark-card)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center border-l-4 border-[var(--color-secondary)] inline-block ml-4 sm:ml-8 pl-6 text-left">
-          <motion.h1 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tight mb-4"
-          >
-            Catálogo
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-[var(--color-accent)] font-sans text-lg max-w-2xl"
-          >
-            Encuentra motores, paquetes completos y transmisiones para llevar tu proyecto al siguiente nivel.
-          </motion.p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-l-4 border-[var(--color-secondary)] pl-6">
+            <motion.h1
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-4xl md:text-5xl font-display font-black text-white uppercase tracking-tight mb-4"
+            >
+              Catálogo
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-[var(--color-accent)] font-sans text-base sm:text-lg max-w-2xl"
+            >
+              Encuentra motores, paquetes completos y transmisiones para llevar tu proyecto al siguiente nivel.
+            </motion.p>
+          </div>
         </div>
       </div>
 

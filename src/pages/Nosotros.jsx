@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Settings, Zap, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import nosotrosBg from '../assets/HeroFondo.png';
+import nosotrosBg from '../assets/HeroFondo2.png';
 import hptunners from '../assets/nosotros/HpTunners.png';
 import stock from '../assets/nosotros/stock.png';
 import performance from '../assets/nosotros/performance.png';
@@ -50,7 +50,7 @@ export default function Nosotros() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-display text-[44px] md:text-[72px] font-black text-white uppercase italic leading-[1.1] max-w-4xl tracking-tighter"
+            className="font-display text-[28px] sm:text-[44px] md:text-[72px] font-black text-white uppercase italic leading-[1.1] max-w-4xl tracking-tighter"
           >
             Sobre A1 Motors<br /><span className="text-[#ce0217]">Tico Swap</span>
           </motion.h1>
@@ -82,13 +82,13 @@ export default function Nosotros() {
               </p>
             </motion.div>
             <motion.div variants={itemVariants} className="mt-12 grid grid-cols-2 gap-[24px]">
-              <div className="bg-[#201f1f] p-6 border-l-4 border-[#003399] border-t border-t-[#2a2a2a] shadow-lg">
-                <div className="font-display text-[32px] font-bold text-white mb-2 leading-[1.2]">HP TUNNERS</div>
-                <div className="font-sans text-[14px] font-semibold text-[#c4c5d5] uppercase tracking-[0.05em] leading-[1]">Software</div>
+              <div className="bg-[#201f1f] p-4 sm:p-6 border-l-4 border-[#003399] border-t border-t-[#2a2a2a] shadow-lg">
+                <div className="font-display text-[22px] sm:text-[28px] md:text-[32px] font-bold text-white mb-2 leading-[1.2]">HP TUNNERS</div>
+                <div className="font-sans text-[13px] sm:text-[14px] font-semibold text-[#c4c5d5] uppercase tracking-[0.05em] leading-[1]">Software</div>
               </div>
-              <div className="bg-[#201f1f] p-6 border-l-4 border-[#ce0217] border-t border-t-[#2a2a2a] shadow-lg">
-                <div className="font-display text-[32px] font-bold text-white mb-2 leading-[1.2]">100%</div>
-                <div className="font-sans text-[14px] font-semibold text-[#c4c5d5] uppercase tracking-[0.05em] leading-[1]">Precisión Técnica</div>
+              <div className="bg-[#201f1f] p-4 sm:p-6 border-l-4 border-[#ce0217] border-t border-t-[#2a2a2a] shadow-lg">
+                <div className="font-display text-[22px] sm:text-[28px] md:text-[32px] font-bold text-white mb-2 leading-[1.2]">100%</div>
+                <div className="font-sans text-[13px] sm:text-[14px] font-semibold text-[#c4c5d5] uppercase tracking-[0.05em] leading-[1]">Precisión Técnica</div>
               </div>
             </motion.div>
           </div>
@@ -123,28 +123,28 @@ export default function Nosotros() {
             className="grid grid-cols-1 md:grid-cols-4 gap-4"
           >
             {/* Bento Item 1 */}
-            <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-[#201f1f] border border-[#353534] h-[576px]">
+            <motion.div variants={itemVariants} className="md:col-span-2 md:row-span-2 relative group overflow-hidden bg-[#201f1f] border border-[#353534] h-[280px] sm:h-[380px] md:h-[576px]">
               <img className="w-full h-full object-cover opacity-60 group-hover:scale-100 transition-transform duration-700" alt="Workshop" src={workshop} />
-              <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-[#131313] to-transparent">
-                <div className="bg-[#003399] text-white px-3 py-1 inline-block mb-3 font-sans text-[14px] font-semibold uppercase tracking-[0.05em]">Events</div>
+              <div className="absolute bottom-0 left-0 p-4 sm:p-8 w-full bg-gradient-to-t from-[#131313] to-transparent">
+                <div className="bg-[#003399] text-white px-3 py-1 inline-block mb-3 font-sans text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em]">Events</div>
               </div>
             </motion.div>
             {/* Bento Item 2 */}
-            <motion.div variants={itemVariants} className="md:col-span-2 relative group overflow-hidden bg-[#201f1f] border border-[#353534] h-[242px]">
+            <motion.div variants={itemVariants} className="md:col-span-2 relative group overflow-hidden bg-[#201f1f] border border-[#353534] h-[200px] sm:h-[242px]">
               <img className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Dashboard" src={hptunners} />
-              <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-[#131313] to-transparent">
-                <div className="bg-[#003399] text-white px-3 py-1 inline-block mb-1 font-sans text-[14px] font-semibold uppercase tracking-[0.05em]">Digital Calibration</div>
+              <div className="absolute bottom-0 left-0 p-4 sm:p-8 w-full bg-gradient-to-t from-[#131313] to-transparent">
+                <div className="bg-[#003399] text-white px-3 py-1 inline-block mb-1 font-sans text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.05em]">Digital Calibration</div>
               </div>
             </motion.div>
             {/* Bento Item 3 */}
-            <motion.div variants={itemVariants} className="relative group overflow-hidden bg-[#201f1f] border border-[#353534] aspect-[1/1]">
+            <motion.div variants={itemVariants} className="relative group overflow-hidden bg-[#201f1f] border border-[#353534] aspect-square">
               <img className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Precision task" src={stock} />
             </motion.div>
             {/* Bento Item 4 */}
-            <motion.div variants={itemVariants} className="relative group overflow-hidden bg-[#201f1f] border border-[#353534] aspect-[1/1]">
+            <motion.div variants={itemVariants} className="relative group overflow-hidden bg-[#201f1f] border border-[#353534] aspect-square">
               <img className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" alt="Dyno run" src={performance} />
               <div className="absolute bottom-4 left-4">
-                <div className="font-sans text-[14px] font-semibold uppercase text-[#b5c4ff] tracking-[0.05em] leading-[1]">Performance</div>
+                <div className="font-sans text-[13px] sm:text-[14px] font-semibold uppercase text-[#b5c4ff] tracking-[0.05em] leading-[1]">Performance</div>
               </div>
             </motion.div>
           </motion.div>
@@ -180,15 +180,15 @@ export default function Nosotros() {
 
       {/* Performance Metric / Progress Section */}
       <section className="py-20 bg-[#2a2a2a] border-t-2 border-[#003399]">
-        <div className="px-4 sm:px-6 lg:px-[64px] max-w-[1440px] mx-auto flex flex-col md:flex-row items-center gap-[24px]">
+        <div className="px-4 sm:px-6 lg:px-[64px] max-w-[1440px] mx-auto flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-[24px]">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="flex-1 w-full"
           >
-            <h3 className="font-display text-[48px] font-extrabold uppercase italic mb-4 leading-[1.2]">ENGINEERED FOR POWER</h3>
-            <p className="font-sans text-[14px] font-semibold text-[#c4c5d5] uppercase tracking-[0.05em]">Nuestra métrica de éxito es tu satisfacción al volante.</p>
+            <h3 className="font-display text-[26px] sm:text-[36px] md:text-[48px] font-extrabold uppercase italic mb-4 leading-[1.2]">ENGINEERED FOR POWER</h3>
+            <p className="font-sans text-[13px] sm:text-[14px] font-semibold text-[#c4c5d5] uppercase tracking-[0.05em]">Nuestra métrica de éxito es tu satisfacción al volante.</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -228,18 +228,18 @@ export default function Nosotros() {
           transition={{ duration: 0.8 }}
           className="relative z-10 px-4 max-w-[1440px] mx-auto"
         >
-          <h2 className="font-display text-[44px] md:text-[72px] uppercase font-black mb-8 italic leading-[1.1] tracking-tighter">¿LISTO PARA EL SWAP?</h2>
-          <p className="font-display text-[24px] font-bold mb-12 max-w-2xl mx-auto uppercase leading-[1.3]">Transforma tu proyecto hoy mismo con los especialistas.</p>
-          <div className="flex flex-col md:flex-row justify-center gap-6">
+          <h2 className="font-display text-[28px] sm:text-[44px] md:text-[72px] uppercase font-black mb-6 md:mb-8 italic leading-[1.1] tracking-tighter">¿LISTO PARA EL SWAP?</h2>
+          <p className="font-display text-[15px] sm:text-[18px] md:text-[24px] font-bold mb-8 md:mb-12 max-w-2xl mx-auto uppercase leading-[1.3] px-2">Transforma tu proyecto hoy mismo con los especialistas.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 md:gap-6 px-4 sm:px-0">
             <a
               href="https://wa.me/50689948485"
-              className="inline-block bg-[#ce0217] text-white px-12 py-5 font-display text-[24px] font-bold uppercase italic hover:bg-[#ce0217]/90 transition-all border-b-4 border-[#690006]"
+              className="inline-block bg-[#ce0217] text-white px-6 sm:px-10 md:px-12 py-4 md:py-5 font-display text-[16px] sm:text-[20px] md:text-[24px] font-bold uppercase italic hover:bg-[#ce0217]/90 transition-all border-b-4 border-[#690006]"
             >
               HABLAR POR WHATSAPP
             </a>
             <Link
               to="/catalogo"
-              className="inline-block bg-transparent border-2 border-white text-white px-12 py-5 font-display text-[24px] font-bold uppercase italic hover:bg-white hover:text-[#131313] transition-all"
+              className="inline-block bg-transparent border-2 border-white text-white px-6 sm:px-10 md:px-12 py-4 md:py-5 font-display text-[16px] sm:text-[20px] md:text-[24px] font-bold uppercase italic hover:bg-white hover:text-[#131313] transition-all"
             >
               VER CATÁLOGO
             </Link>

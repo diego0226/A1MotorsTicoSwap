@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/HeroFondo.png';
+import heroBg from '../assets/HeroFondo2.png';
 
 export default function Hero() {
   return (
     <div className="relative min-h-screen flex items-center bg-[var(--color-dark-base)] overflow-hidden border-b border-[var(--color-dark-card)] pt-20">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-dark-base)] via-[var(--color-dark-base)]/60 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-dark-base)] via-[var(--color-dark-base)]/10 to-transparent z-10" />
         <img
           src={heroBg}
           alt="Automotive Workshop"
-          className="w-full h-full object-cover opacity-60 grayscale"
+          className="w-full h-full object-cover opacity-50 grayscale"
         />
         <div className="absolute inset-0 bg-[var(--color-primary)]/5 mix-blend-overlay z-10" />
       </div>
@@ -30,7 +30,7 @@ export default function Hero() {
           >
             PRECISIÓN MECÁNICA COSTARRICENSE
           </motion.div>
-          <h1 className="text-5xl md:text-7xl font-display font-black text-white leading-[1.1] mb-8 uppercase tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-black text-white leading-[1.1] mb-8 uppercase tracking-tight">
             ESPECIALISTAS EN <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-secondary)] to-[var(--color-primary)]">
               LS SWAPS EN COSTA RICA.
