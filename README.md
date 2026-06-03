@@ -1,4 +1,4 @@
-# 🚗 A1 Motors Tico Swap
+#  A1 Motors Tico Swap
 
 <p align="center">
   <strong>Especialistas en LS Swaps, transmisiones y proyectos automotrices de alto rendimiento.</strong>
@@ -10,13 +10,13 @@
 
 ---
 
-## 🌐 Demo
+## 🌐 Deploy
 
-👉 https://a1motorsticoswap.vercel.app/
+ https://a1motorsticoswap.vercel.app/
 
 ---
 
-# 🛠️ Tecnologías Utilizadas
+#  Tecnologías Utilizadas
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=react,vite,js,html,css,tailwind,git,github,vercel" />
@@ -32,7 +32,7 @@
 
 ---
 
-# ⚙️ Características
+# Características
 
 ✅ Diseño industrial/brutalista moderno  
 ✅ Animaciones fluidas con Framer Motion  
@@ -60,7 +60,7 @@ src/
 
 ---
 
-# 🚀 Instalación
+# Instalación
 
 ```bash
 # Clonar repositorio
@@ -78,13 +78,13 @@ npm run dev
 
 ---
 
-# 🧠 Objetivo del Proyecto
+# Objetivo del Proyecto
 
 Este proyecto fue creado para ofrecer una presencia web moderna y visualmente impactante para el mundo de los LS Swaps y proyectos automotrices personalizados, mostrando motores, transmisiones y configuraciones de rendimiento de una manera clara y profesional.
 
 ---
 
-# 📱 Responsive Design
+# Responsive Design
 
 Optimizado para:
 
@@ -95,7 +95,7 @@ Optimizado para:
 
 ---
 
-# 🔥 Performance
+# Performance
 
 - Carga rápida con Vite
 - Componentes optimizados
@@ -104,7 +104,7 @@ Optimizado para:
 
 ---
 
-# 👨‍💻 Autor
+# Autor
 
 **Diego Zamora**
 
