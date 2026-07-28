@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  /* Azul de marca. Sólido y con texto blanco encima da 10.4:1 de contraste. */
+  --color-primary: #003399;
+  /* Sobre fondo negro el azul base queda ilegible (2.3:1); esta variante
+     aclarada llega a 5.2:1 y es la que se usa para texto y enlaces. */
+  --color-primary-light: #4c7fe8;
+  --color-secondary: #e31e24;
+  --color-secondary-dark: #8b0f13;
+
+  --color-accent: #e5e2e1;
+  --color-muted: #a9a7a6;
+
+  --color-dark-base: #0a0a0a;
+  --color-dark-surface: #121212;
+  --color-dark-card: #1f1f1f;
+  --color-dark-border: #2e2e2e;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Compensa el header fijo cuando se salta a un ancla (#faq, #paquetes). */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--color-dark-base);
+    color: var(--color-accent);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Foco visible y consistente para navegación por teclado. */
+  :focus-visible {
+    outline: 2px solid var(--color-primary-light);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--color-secondary);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px rgb(227 30 36 / 0.45);
+  }
+
+  /* Ritmo vertical único para todas las secciones del sitio. */
+  .section-y {
+    padding-block: 5rem;
+  }
+
+  @media (width >= 768px) {
+    .section-y {
+      padding-block: 7rem;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Animaciones
+   Reemplazan a framer-motion (~34 KB gzip). Las de entrada corren en CSS sin
+   esperar a la hidratación; las de scroll solo necesitan que <Reveal> ponga
+   la clase `is-visible` vía IntersectionObserver.
+   -------------------------------------------------------------------------- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.75rem, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-rise {
+  animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Apertura de popups: corta y con origen en la esquina del botón, para que se
+   lea como que el panel sale del botón flotante. 0.7s se sentiría lento aquí. */
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 0.75rem, 0) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-pop {
+  animation: pop 0.22s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  transform-origin: bottom right;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 1.75rem, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Sin JS (o si el observer falla) el contenido debe verse igual. */
+.no-js [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scrollbar en tono oscuro. */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-card);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
