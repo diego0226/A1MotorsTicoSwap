@@ -3,7 +3,7 @@ import JsonLd from '@/components/JsonLd';
 import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
-import { Clock, Mail, MapPin, Navigation, Phone, WhatsApp } from '@/components/icons';
+import { Clock, MapPin, Navigation, Phone, WhatsApp } from '@/components/icons';
 import { breadcrumbSchema, buildMetadata } from '@/lib/seo';
 import { site, whatsappUrl } from '@/lib/site';
 
@@ -38,12 +38,6 @@ const contactInfo = [
     href: `tel:${site.phoneRaw}`,
   },
   {
-    Icon: Mail,
-    title: 'Correo',
-    detail: site.email,
-    href: `mailto:${site.email}`,
-  },
-  {
     Icon: Clock,
     title: 'Horario',
     detail: site.hoursText,
@@ -60,7 +54,7 @@ export default function ContactoPage() {
       />
 
       <Container className="section-y">
-        <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {contactInfo.map(({ Icon, title, detail, href }, index) => {
             const isExternal = href?.startsWith('http');
             const content = (

@@ -93,15 +93,6 @@ export default function PrivacidadPage() {
                   {site.phone}
                 </a>
               </li>
-              <li>
-                Correo:{' '}
-                <a
-                  href={`mailto:${site.email}`}
-                  className="text-primary-light underline underline-offset-2 hover:text-white"
-                >
-                  {site.email}
-                </a>
-              </li>
               <li>Taller: {site.address.full}</li>
             </ul>
           </section>

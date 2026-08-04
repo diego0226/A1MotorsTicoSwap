@@ -1,3 +1,7 @@
+import { SITE_URL } from './lib/site.js';
+
+const canonicalHost = new URL(SITE_URL).host;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,6 +14,22 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Las imágenes del catálogo no cambian: cachear un año.
     minimumCacheTTL: 31536000,
+  },
+
+  // El dominio canónico es el apex (sin www). Si alguien llega por www —o si en
+  // Vercel se agrega como dominio normal en vez de como redirección— lo mandamos
+  // al apex con un 308 para no repartir la autoridad SEO entre dos hosts.
+  async redirects() {
+    if (canonicalHost.startsWith('www.')) return [];
+
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: `www.${canonicalHost}` }],
+        destination: `${SITE_URL}/:path*`,
+        permanent: true,
+      },
+    ];
   },
 
   async headers() {

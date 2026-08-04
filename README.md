@@ -97,6 +97,17 @@ NEXT_PUBLIC_SITE_URL=https://a1motorsticoswap.com
 
 Si no se define, se usa `https://a1motorsticoswap.com` por defecto.
 
+El canónico es el **apex** (sin `www`). `next.config.mjs` redirige
+`www.a1motorsticoswap.com` al apex con un 308, así que aunque en Vercel se
+agregue `www` como dominio normal, Google indexa un solo host.
+
+En el registrador, los registros DNS que apuntan a Vercel son:
+
+| Tipo    | Nombre | Valor                  |
+| ------- | ------ | ---------------------- |
+| `A`     | `@`    | `76.76.21.21`          |
+| `CNAME` | `www`  | `cname.vercel-dns.com` |
+
 ---
 
 ## Imágenes
