@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import Container from '@/components/Container';
 import Reveal from '@/components/Reveal';
 import SectionHeading from '@/components/SectionHeading';
@@ -47,6 +49,19 @@ export default function FAQ() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mx-auto mt-10 max-w-3xl text-center">
+          <p className="font-sans text-sm text-muted sm:text-base">
+            ¿Querés el detalle técnico completo?{' '}
+            <Link
+              href="/guia-swap-ls-costa-rica"
+              className="font-semibold text-primary-light underline underline-offset-4 hover:text-white"
+            >
+              Leé la guía del swap LS y V8 en Costa Rica
+            </Link>
+            : comparativa de motores, transmisiones y el proceso paso a paso.
+          </p>
+        </Reveal>
       </Container>
     </section>
   );

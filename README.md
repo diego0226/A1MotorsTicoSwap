@@ -12,7 +12,7 @@
 
 ## Deploy
 
-https://a1motorsticoswap.com
+https://www.a1motorsticoswap.com
 
 ---
 
@@ -92,21 +92,16 @@ El dominio canónico se define en `NEXT_PUBLIC_SITE_URL`. En Vercel se agrega en
 *Settings → Environment Variables*; en local, en un archivo `.env.local`:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://a1motorsticoswap.com
+NEXT_PUBLIC_SITE_URL=https://www.a1motorsticoswap.com
 ```
 
-Si no se define, se usa `https://a1motorsticoswap.com` por defecto.
+Si no se define, se usa `https://www.a1motorsticoswap.com` por defecto.
 
-El canónico es el **apex** (sin `www`). `next.config.mjs` redirige
-`www.a1motorsticoswap.com` al apex con un 308, así que aunque en Vercel se
-agregue `www` como dominio normal, Google indexa un solo host.
-
-En el registrador, los registros DNS que apuntan a Vercel son:
-
-| Tipo    | Nombre | Valor                  |
-| ------- | ------ | ---------------------- |
-| `A`     | `@`    | `76.76.21.21`          |
-| `CNAME` | `www`  | `cname.vercel-dns.com` |
+> **El host canónico se define en dos lugares y tienen que coincidir:** el
+> dominio primario en *Vercel → Domains* y este `NEXT_PUBLIC_SITE_URL`. Vercel
+> canonicaliza el host en el borde; **no** agregues una redirección `www` ↔ apex
+> en `next.config.mjs`, porque si apunta al sentido contrario que Vercel se
+> genera un bucle 308 infinito y el sitio deja de responder.
 
 ---
 

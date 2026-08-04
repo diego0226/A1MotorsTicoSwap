@@ -64,7 +64,9 @@ export default function Navbar() {
             <span className="text-primary-light">SWAP</span>
           </Link>
 
-          <ul className="hidden items-center gap-8 lg:flex">
+          {/* gap reducido en lg: con la Guía son seis enlaces más el botón y a
+              1024px se salían del ancho disponible. */}
+          <ul className="hidden items-center gap-5 lg:flex xl:gap-8">
             {navigation.map((link) => (
               <li key={link.path}>
                 <Link

@@ -7,7 +7,7 @@ import { whatsappUrl } from '@/lib/site';
 import heroBg from '@/assets/herofondo2.webp';
 
 const stats = [
-  { value: 'LS 5.3 – 6.2', label: 'Motores rectificados' },
+  { value: 'LS 5.3 – 6.2', label: 'Motores V8 rectificados' },
   { value: '4L60E · 6L80E', label: 'Transmisiones GM' },
   { value: 'HP Tuners', label: 'Programación de ECU' },
 ];
@@ -47,12 +47,13 @@ export default function Hero() {
           <h1 className="animate-rise mb-6 font-display text-4xl font-black uppercase leading-[1.05] tracking-tight text-white sm:text-5xl md:text-7xl" style={{ animationDelay: '80ms' }}>
             Especialistas en{' '}
             <span className="bg-gradient-to-r from-secondary to-primary-light bg-clip-text text-transparent">
-              swaps LS en Costa Rica
-            </span>
+              swaps LS y motores V8
+            </span>{' '}
+            en Costa Rica
           </h1>
 
           <p className="animate-rise mb-10 max-w-2xl font-sans text-base leading-relaxed text-accent sm:text-lg md:text-xl" style={{ animationDelay: '160ms' }}>
-            Instalamos motores <strong className="font-semibold text-white">LS 5.3, 6.0 LQ4 y LQ9</strong>{' '}
+            Instalamos motores <strong className="font-semibold text-white">V8 LS 5.3, 6.0 LQ4 y LQ9</strong>{' '}
             rectificados con transmisión GM, adaptación completa y calibración de ECU.
             Taller en Grecia, Alajuela, con servicio para todo el país.
           </p>

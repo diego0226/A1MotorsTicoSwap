@@ -10,6 +10,7 @@ export default function sitemap() {
   const routes = [
     { path: '/', priority: 1, changeFrequency: 'weekly' },
     { path: '/catalogo', priority: 0.9, changeFrequency: 'weekly' },
+    { path: '/guia-swap-ls-costa-rica', priority: 0.9, changeFrequency: 'monthly' },
     { path: '/personalizar', priority: 0.8, changeFrequency: 'monthly' },
     { path: '/nosotros', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/contacto', priority: 0.7, changeFrequency: 'monthly' },

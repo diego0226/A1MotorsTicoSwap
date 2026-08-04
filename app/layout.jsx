@@ -32,7 +32,7 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     // Cada página aporta su título; la marca se añade sola al final.
-    default: `Swaps LS en Costa Rica | ${site.name}`,
+    default: `Swaps LS y Motores V8 en Costa Rica | ${site.name}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -51,7 +51,7 @@ export const metadata = {
     locale: site.locale,
     siteName: site.name,
     url: SITE_URL,
-    title: `Swaps LS en Costa Rica | ${site.name}`,
+    title: `Swaps LS y Motores V8 en Costa Rica | ${site.name}`,
     description: site.description,
     images: [
       {
@@ -64,7 +64,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `Swaps LS en Costa Rica | ${site.name}`,
+    title: `Swaps LS y Motores V8 en Costa Rica | ${site.name}`,
     description: site.description,
     images: ['/og.jpg'],
   },

@@ -10,7 +10,7 @@ import { buildMetadata, faqSchema } from '@/lib/seo';
 import { site } from '@/lib/site';
 
 export const metadata = buildMetadata({
-  title: `Swaps LS en Costa Rica | ${site.name}`,
+  title: `Swaps LS y Motores V8 en Costa Rica | ${site.name}`,
   description: site.description,
   path: '/',
   keywords: site.keywords,
