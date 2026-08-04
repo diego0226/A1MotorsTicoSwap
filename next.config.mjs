@@ -1,7 +1,3 @@
-import { SITE_URL } from './lib/site.js';
-
-const canonicalHost = new URL(SITE_URL).host;
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -16,22 +12,12 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
   },
 
-  // El dominio canónico es el apex (sin www). Si alguien llega por www —o si en
-  // Vercel se agrega como dominio normal en vez de como redirección— lo mandamos
-  // al apex con un 308 para no repartir la autoridad SEO entre dos hosts.
-  async redirects() {
-    if (canonicalHost.startsWith('www.')) return [];
-
-    return [
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: `www.${canonicalHost}` }],
-        destination: `${SITE_URL}/:path*`,
-        permanent: true,
-      },
-    ];
-  },
-
+  // NO agregar aquí una redirección www <-> apex. Vercel ya canonicaliza el
+  // host en el borde según cuál dominio esté marcado como primario, y una regla
+  // en el código que apunte al lado contrario genera un bucle 308 infinito que
+  // tumba el sitio entero. El host canónico se controla en dos lugares y solo
+  // en esos dos: el dominio primario en Vercel y NEXT_PUBLIC_SITE_URL, que
+  // deben coincidir.
   async headers() {
     return [
       {
