@@ -86,6 +86,12 @@ en el JSON-LD y en la metadata al mismo tiempo.
   contenido completo sin ejecutar JavaScript
 - Texto alternativo descriptivo en todas las imágenes
 
+### Google Business Profile y Search Console
+
+El paso a paso para crear la ficha del negocio, dar de alta el sitio en Search
+Console y validar los datos estructurados está en
+[`docs/google-business-y-search-console.md`](docs/google-business-y-search-console.md).
+
 ### Configurar el dominio
 
 El dominio canónico se define en `NEXT_PUBLIC_SITE_URL`. En Vercel se agrega en
