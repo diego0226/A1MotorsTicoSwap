@@ -365,9 +365,9 @@ export const projects = [
     ],
 
     cover: imgur(
-      'Qs83A4J',
+      'GSRCVXq',
       'Chevrolet Tahoe 1998 de dos puertas rojo y gris, bajado de suspensión y con aros pulidos, después del swap a LS 6.0 LQ4',
-      { width: 2880, height: 2160 },
+      { width: 1448, height: 1086 },
     ),
 
     /** Sin fotos del motor viejo: la ficha enseña la portada en grande. */
@@ -398,9 +398,9 @@ export const projects = [
         { width: 1170, height: 1919 },
       ),
       imgur(
-        'Qs83A4J',
+        'GSRCVXq',
         'Chevrolet Tahoe 1998 de dos puertas rojo y gris terminado, con aros pulidos y placa de Costa Rica, ya con el swap a LS 6.0 LQ4',
-        { width: 2880, height: 2160 },
+        { width: 1448, height: 1086 },
       ),
     ],
   },
