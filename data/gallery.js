@@ -37,6 +37,6 @@ export const gallery = [
     image: proyecto4,
     title: 'Chevrolet Tahoe en pista',
     alt: 'Chevrolet Tahoe de dos puertas rojo y gris con swap LS en el autódromo, con placa de Costa Rica',
-    href: '/proyectos/chevrolet-tahoe-1998-lq4',
+    href: '/proyectos/chevrolet-tahoe-1998-ls2',
   },
 ];

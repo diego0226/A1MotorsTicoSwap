@@ -28,6 +28,25 @@ const nextConfig = {
   // tumba el sitio entero. El host canónico se controla en dos lugares y solo
   // en esos dos: el dominio primario en Vercel y NEXT_PUBLIC_SITE_URL, que
   // deben coincidir.
+  // Redirecciones de RUTA. Ojo: no tienen nada que ver con la advertencia de
+  // arriba, que habla de redirigir el HOST (www <-> apex). Aquella chocaba con
+  // la canonicalización de Vercel y hacía un bucle; estas solo cambian el
+  // camino dentro del mismo dominio, así que no pueden ciclar.
+  //
+  // Cuando se corrige el slug de una ficha ya publicada, la ruta vieja se
+  // agrega acá: mantiene vivo cualquier enlace que alguien haya compartido y
+  // le pasa a la URL nueva la autoridad que ya hubiera acumulado la vieja.
+  async redirects() {
+    return [
+      {
+        // Se publicó como "lq4" por un dato equivocado: el motor es un LS2.
+        source: '/proyectos/chevrolet-tahoe-1998-lq4',
+        destination: '/proyectos/chevrolet-tahoe-1998-ls2',
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

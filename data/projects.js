@@ -326,12 +326,15 @@ export const projects = [
   },
 
   {
-    slug: 'chevrolet-tahoe-1998-lq4',
-    name: 'Chevrolet Tahoe 1998 con LS 6.0 LQ4',
-    shortName: 'Tahoe 1998 LQ4',
+    // La ficha se publicó con "lq4" en la URL por un dato equivocado. Al
+    // corregirlo se cambió el slug y quedó una redirección permanente de la
+    // ruta vieja en next.config.mjs.
+    slug: 'chevrolet-tahoe-1998-ls2',
+    name: 'Chevrolet Tahoe 1998 con LS2',
+    shortName: 'Tahoe 1998 LS2',
 
     from: '350',
-    to: 'LQ4 6.0',
+    to: 'LS2',
 
     vehicle: 'Chevrolet Tahoe',
     // TODO A1 Motors: poner la fecha real de entrega. Esta lo deja de segundo,
@@ -339,17 +342,17 @@ export const projects = [
     date: '2025-12-20',
 
     summary:
-      'Un Tahoe de dos puertas del 98 que cambió su 350 Vortec por un LS 6.0 LQ4 con caja 4L60. El motor y la caja se pintaron en rojo a juego con la carrocería antes de montarlos.',
+      'Un Tahoe de dos puertas del 98 que cambió su 350 Vortec por un LS2 6.0 con caja 4L60. El motor y la caja se pintaron en rojo a juego con la carrocería antes de montarlos.',
 
     intro:
-      'El 350 que traía y el LQ4 que se le puso llevan los dos el apellido Vortec, pero los separa una generación completa: el primero es un bloque pequeño de los de siempre, con distribuidor; el segundo ya es de la familia LS, con inyección secuencial y computadora. Acá el trabajo no se quedó en lo mecánico: el motor, la caja y los múltiples se prepararon y se pintaron en rojo a juego con la carrocería antes de bajarlos, para que el compartimiento quedara tan trabajado como el resto del carro.',
+      'El 350 Vortec que traía es un bloque pequeño de los de siempre, con distribuidor y toda la mecánica de los noventa. El LS2 que se le puso es de la cuarta generación de la familia LS, el mismo motor que GM le montó al Corvette de esos años: inyección secuencial, bobina por cilindro y computadora. Acá el trabajo no se quedó en lo mecánico: el motor, la caja y los múltiples se prepararon y se pintaron en rojo a juego con la carrocería antes de bajarlos, para que el compartimiento quedara tan trabajado como el resto del carro.',
 
     /** TODO A1 Motors: completar la duración. */
     specs: [
       { label: 'Vehículo', value: 'Chevrolet Tahoe de dos puertas' },
       { label: 'Año', value: '1998' },
       { label: 'Motor original', value: '350 Vortec de bloque pequeño' },
-      { label: 'Motor instalado', value: 'V8 LS 6.0 LQ4' },
+      { label: 'Motor instalado', value: 'V8 LS2 6.0' },
       { label: 'Transmisión', value: 'Automática 4L60, tracción 4x2' },
       { label: 'Escape', value: 'Múltiples tipo header en acero inoxidable' },
       { label: 'Duración', value: '' },
@@ -358,15 +361,15 @@ export const projects = [
 
     work: [
       'Desmontaje del 350 Vortec de fábrica con su caja y su cableado',
-      'Motor LQ4 y caja 4L60 armados y pintados en rojo, a juego con la carrocería',
+      'Motor LS2 y caja 4L60 armados y pintados en rojo, a juego con la carrocería',
       'Múltiples de escape tipo header en acero inoxidable',
       'Instalación del conjunto motor y caja con adaptación de soportes al chasis',
-      'Cableado, computadora y enfriamiento resueltos para el LQ4',
+      'Cableado, computadora y enfriamiento resueltos para el LS2',
     ],
 
     cover: imgur(
       'GSRCVXq',
-      'Chevrolet Tahoe 1998 de dos puertas rojo y gris, bajado de suspensión y con aros pulidos, después del swap a LS 6.0 LQ4',
+      'Chevrolet Tahoe 1998 de dos puertas rojo y gris, bajado de suspensión y con aros pulidos, después del swap a LS2 6.0',
       { width: 1448, height: 1086 },
     ),
 
@@ -376,17 +379,17 @@ export const projects = [
     during: [
       imgur(
         'wzaroJm',
-        'El Chevrolet Tahoe rojo con el frente desarmado y el conjunto de motor LQ4 y caja 4L60 colgando de la grúa, todo pintado en rojo',
+        'El Chevrolet Tahoe rojo con el frente desarmado y el conjunto de motor LS2 y caja 4L60 colgando de la grúa, todo pintado en rojo',
         { width: 1600, height: 900 },
       ),
       imgur(
         'Xcjx481',
-        'El LQ4 6.0 y la caja 4L60 pintados en rojo colgando de la grúa, con múltiples tipo header en acero inoxidable y calcomanías de A1 Motors Tico Swap',
+        'El LS2 6.0 y la caja 4L60 pintados en rojo colgando de la grúa, con múltiples tipo header en acero inoxidable y calcomanías de A1 Motors Tico Swap',
         { width: 2419, height: 3226 },
       ),
       imgur(
         'hRRDzuz',
-        'Bajando el LQ4 al compartimiento del Tahoe con el frente desarmado, con un mecánico guiando el motor desde el tecle',
+        'Bajando el LS2 al compartimiento del Tahoe con el frente desarmado, con un mecánico guiando el motor desde el tecle',
         { width: 3024, height: 4032 },
       ),
     ],
@@ -394,12 +397,12 @@ export const projects = [
     after: [
       imgur(
         'AOHnPVx',
-        'Compartimiento terminado del Chevrolet Tahoe con el LS 6.0 LQ4 instalado, tapa Vortec pintada en rojo y negro, tubo de admisión pulido y filtro cónico',
+        'Compartimiento terminado del Chevrolet Tahoe con el LS2 6.0 instalado, tapa pintada en rojo y negro, tubo de admisión pulido y filtro cónico',
         { width: 1170, height: 1919 },
       ),
       imgur(
         'GSRCVXq',
-        'Chevrolet Tahoe 1998 de dos puertas rojo y gris terminado, con aros pulidos y placa de Costa Rica, ya con el swap a LS 6.0 LQ4',
+        'Chevrolet Tahoe 1998 de dos puertas rojo y gris terminado, con aros pulidos y placa de Costa Rica, ya con el swap a LS2 6.0',
         { width: 1448, height: 1086 },
       ),
     ],
