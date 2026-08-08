@@ -64,9 +64,12 @@ export default function Navbar() {
             <span className="text-primary-light">SWAP</span>
           </Link>
 
-          {/* gap reducido en lg: con la Guía son seis enlaces más el botón y a
-              1024px se salían del ancho disponible. */}
-          <ul className="hidden items-center gap-5 lg:flex xl:gap-8">
+          {/* El menú completo aparece hasta `xl`. Con Proyectos ya son siete
+              enlaces más el botón de cotizar: medidos contra el logo, piden
+              unos 1100px y a 1024px se montaban unos sobre otros. Entre 1024
+              y 1280 se usa el menú hamburguesa, que a ese ancho se maneja
+              igual de bien. */}
+          <ul className="hidden items-center gap-5 xl:flex 2xl:gap-8">
             {navigation.map((link) => (
               <li key={link.path}>
                 <Link
@@ -102,7 +105,7 @@ export default function Navbar() {
             onClick={() => setIsOpen((v) => !v)}
             // El padding negativo agranda el área de toque a ~44px sin mover
             // nada visualmente: Google penaliza los objetivos táctiles chicos.
-            className="-m-2 p-2 text-accent transition-colors hover:text-white lg:hidden"
+            className="-m-2 p-2 text-accent transition-colors hover:text-white xl:hidden"
             aria-expanded={isOpen}
             aria-controls="menu-movil"
             aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
@@ -114,7 +117,7 @@ export default function Navbar() {
         {isOpen ? (
           <div
             id="menu-movil"
-            className="animate-rise border-t border-dark-border bg-dark-surface lg:hidden"
+            className="animate-rise border-t border-dark-border bg-dark-surface xl:hidden"
           >
             <ul className="mx-auto w-full max-w-7xl px-5 py-3 sm:px-6">
               {navigation.map((link) => (

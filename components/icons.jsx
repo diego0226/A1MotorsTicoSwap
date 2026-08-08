@@ -1,8 +1,8 @@
 /**
- * Los 11 iconos que usa el sitio, inline.
+ * Los iconos que usa el sitio, inline.
  *
  * Sustituyen a lucide-react: son Server Components (0 KB de JS) y evitan
- * arrastrar el paquete completo para once trazos SVG.
+ * arrastrar el paquete completo para un puñado de trazos SVG.
  *
  * Trazados derivados de Lucide (https://lucide.dev), licencia ISC.
  */
@@ -102,6 +102,30 @@ export const Navigation = (p) => (
 export const ChevronDown = (p) => (
   <Icon {...p}>
     <path d="m6 9 6 6 6-6" />
+  </Icon>
+);
+
+export const ChevronLeft = (p) => (
+  <Icon {...p}>
+    <path d="m15 18-6-6 6-6" />
+  </Icon>
+);
+
+export const ChevronRight = (p) => (
+  <Icon {...p}>
+    <path d="m9 18 6-6-6-6" />
+  </Icon>
+);
+
+export const ArrowRight = (p) => (
+  <Icon {...p}>
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </Icon>
+);
+
+export const Expand = (p) => (
+  <Icon {...p}>
+    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
   </Icon>
 );
 

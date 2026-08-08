@@ -1,3 +1,4 @@
+import { sortedProjects } from '@/data/projects';
 import { absoluteUrl, site } from '@/lib/site';
 
 /**
@@ -40,11 +41,24 @@ ${site.address.full}. Atiende proyectos de todo Costa Rica.
 Los precios se cotizan por proyecto: dependen del motor, la transmisión, el
 vehículo aceptor y el alcance de la adaptación. No hay lista de precios pública.
 
+## Trabajos realizados
+
+Cada proyecto se publica con las fotos del antes y del después, la ficha
+técnica del vehículo y el detalle de lo que se hizo.
+
+${sortedProjects
+  .map(
+    (project) =>
+      `- [${project.name}](${absoluteUrl(`/proyectos/${project.slug}`)}): ${project.summary}`,
+  )
+  .join('\n')}
+
 ## Páginas
 
 - [Inicio](${absoluteUrl('/')}): qué hace el taller y paquetes destacados.
 - [Guía del swap LS y V8 en Costa Rica](${absoluteUrl('/guia-swap-ls-costa-rica')}): guía técnica con comparativa de motores, comparativa de transmisiones, el proceso paso a paso y los factores que definen el costo.
 - [Catálogo](${absoluteUrl('/catalogo')}): paquetes de swap y transmisiones disponibles con sus configuraciones.
+- [Proyectos](${absoluteUrl('/proyectos')}): trabajos terminados con el antes y el después de cada vehículo, ficha técnica y fotos del proceso.
 - [Personalizar](${absoluteUrl('/personalizar')}): formulario para cotizar un proyecto a la medida.
 - [Nosotros](${absoluteUrl('/nosotros')}): historia del taller, herramientas y forma de trabajo.
 - [Contacto](${absoluteUrl('/contacto')}): ubicación, horario y mapa.

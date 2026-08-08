@@ -119,6 +119,21 @@
   transform-origin: bottom right;
 }
 
+/* Entrada del visor de fotos: solo opacidad, para que abrir una imagen de
+   pantalla completa no cueste un repintado con transformaciones. */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 0.18s ease-out backwards;
+}
+
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 1.75rem, 0);
@@ -156,6 +171,102 @@
     opacity: 1;
     transform: none;
   }
+}
+
+/* --------------------------------------------------------------------------
+   Comparador antes/después (<BeforeAfter>)
+   El control real es un `<input type="range">` transparente estirado sobre las
+   dos fotos: así el arrastre, el toque y el teclado los resuelve el navegador.
+   Lo que se ve —la línea y la manija cuadrada— es un div aparte.
+   -------------------------------------------------------------------------- */
+
+.ba-range {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   Marco que se manda por el alto
+   Lo usan el comparador y la foto grande de las fichas que no tienen antes.
+
+   En la ficha de un proyecto la imagen va sola y centrada, así que si se deja
+   crecer a lo ancho del contenedor termina midiendo más que la pantalla: un
+   marco cuadrado en 1024px de ancho son 1024px de alto y hay que hacer scroll
+   para ver la mitad de abajo. Acá manda el ALTO y el ancho lo deduce la
+   proporción, así que siempre cabe de una vez sin importar la forma de las
+   fotos.
+
+   Solo desde `lg`: en móvil el ancho de la columna ya lo deja del tamaño
+   correcto y el alto libre se aprovecha mejor.
+   -------------------------------------------------------------------------- */
+@media (width >= 1024px) {
+  .media-fit {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .media-fit .media-frame {
+    height: min(65vh, 600px);
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+.ba-range::-webkit-slider-runnable-track {
+  background: transparent;
+  border: 0;
+}
+
+.ba-range::-moz-range-track {
+  background: transparent;
+  border: 0;
+}
+
+/* Pulgar invisible y angosto a propósito: el recorrido de un range se acorta
+   media anchura de pulgar en cada extremo, así que uno ancho haría que la
+   línea fuera adelantada respecto al dedo. Con 2px el seguimiento es 1:1.
+   El alto exagerado lo recorta el `overflow-hidden` del contenedor y sirve
+   para poder agarrar la manija desde cualquier altura de la foto. */
+.ba-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2px;
+  height: 1200px;
+  background: transparent;
+  border: 0;
+  cursor: ew-resize;
+}
+
+.ba-range::-moz-range-thumb {
+  width: 2px;
+  height: 1200px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: ew-resize;
+}
+
+.ba-range:focus {
+  outline: none;
+}
+
+/* Offset negativo: el contenedor recorta lo que se salga, así que el anillo
+   de foco tiene que dibujarse hacia adentro para verse. */
+.ba-range:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: -4px;
+}
+
+/* Sin JS el arrastre no mueve nada, así que se esconde el control y la
+   invitación a arrastrarlo. Queda la comparación partida al 50%, que sigue
+   enseñando las dos fotos. */
+.no-js .ba-range,
+.no-js .ba-hint {
+  display: none;
 }
 
 /* Scrollbar en tono oscuro. */

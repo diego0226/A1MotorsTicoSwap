@@ -10,6 +10,16 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     // Las imágenes del catálogo no cambian: cachear un año.
     minimumCacheTTL: 31536000,
+
+    // Fotos de los proyectos (/proyectos). Están alojadas en imgur, pero el
+    // visitante nunca le pide nada a imgur: next/image las sirve desde
+    // /_next/image, o sea desde el CDN de Vercel, que baja el original una
+    // sola vez, lo convierte a AVIF y lo cachea el año de arriba. Sin esta
+    // lista blanca Next se niega a optimizar dominios externos, que es lo que
+    // evita que cualquiera use el optimizador del sitio con sus imágenes.
+    remotePatterns: [
+      { protocol: 'https', hostname: 'i.imgur.com', pathname: '/**' },
+    ],
   },
 
   // NO agregar aquí una redirección www <-> apex. Vercel ya canonicaliza el
